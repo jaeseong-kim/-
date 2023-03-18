@@ -17,6 +17,7 @@ class Solution {
             // 시계방향으로 회전
             rotate(arr, query);
             
+            //최소값 구하기
             int min = Integer.MAX_VALUE;
             
             // →
