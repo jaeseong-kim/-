@@ -3,21 +3,21 @@ class Solution {
         int[] answer = new int[queries.length];
         int[][] arr = new int[rows+1][columns+1];
         
-        //arr[rows][columns] 만들기
+        // arr[rows][columns] 만들기
         for(int i = 1; i < arr.length; i++){
             for(int j = 1; j < arr[i].length; j++){
                 arr[i][j] = ((i-1)*columns+j);
             }
         }
         
-        
+        // queries 개수 반복
         for(int i = 0; i < queries.length; i++){
             int[] query = queries[i];
             
             // 시계방향으로 회전
             rotate(arr, query);
             
-            //최소값 구하기
+            // 최소값 구하기
             int min = Integer.MAX_VALUE;
             
             // →
@@ -42,10 +42,6 @@ class Solution {
             
             answer[i] = min;
             
-        }
-        
-        for(int i : answer){
-            System.out.print(i+" ");
         }
         
         return answer;
