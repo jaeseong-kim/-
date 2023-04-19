@@ -10,8 +10,6 @@ public class Main {
         int N = Integer.parseInt(br.readLine());
         long[] dp = new long[N + 1];
 
-
-
         // answer 구하기
         long answer;
         if (N == 1) {
