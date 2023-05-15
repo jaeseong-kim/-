@@ -31,19 +31,18 @@ public class Main {
             sb = new StringBuffer();
             dfs(0, 0);
 
-            System.out.println();
+            System.out.println(sb.toString());
         }
     }
 
     public static void dfs(int cur, int depth) {
-
         if (depth == 6) {
             for (int i = 0; i < arr.length; i++) {
                 if (visited[i]) {
-                    System.out.print(arr[i]+" ");
+                    sb.append(arr[i]).append(" ");
                 }
             }
-            System.out.println();
+            sb.append("\n");
             return;
         }
 
