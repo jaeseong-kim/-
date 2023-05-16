@@ -9,6 +9,8 @@ public class Main {
     public static boolean[] visited;
 
     public static ArrayList<Integer> list;
+    
+    public static StringBuffer sb;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -27,18 +29,20 @@ public class Main {
 
         // 백트래킹
         list = new ArrayList<>();
+        sb = new StringBuffer();
         combination(0, M);
 
+        // 출력
+        System.out.println(sb);
     }
 
     public static void combination(int cur, int depth) {
         if (cur == depth) {
-            StringBuffer sb = new StringBuffer();
             for (int i = 0; i < list.size(); i++) {
                 sb.append(list.get(i)).append(" ");
             }
 
-            System.out.println(sb);
+            sb.append("\n");
             return;
         }
 
