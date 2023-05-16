@@ -17,14 +17,14 @@ public class Main {
         // N, M 입력
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
-        
+
         // 자연수 배열 입력
         arr = new Integer[N];
         visited = new boolean[N];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i + 1;
         }
-        
+
         // 백트래킹
         list = new ArrayList<>();
         combination(0, M);
@@ -33,11 +33,12 @@ public class Main {
 
     public static void combination(int cur, int depth) {
         if (cur == depth) {
+            StringBuffer sb = new StringBuffer();
             for (int i = 0; i < list.size(); i++) {
-                System.out.print(list.get(i) + " ");
+                sb.append(list.get(i)).append(" ");
             }
 
-            System.out.println();
+            System.out.println(sb);
             return;
         }
 
