@@ -8,7 +8,6 @@ public class Main {
     public static int[] arr;
     public static int[] answer;
 
-    public static ArrayList<Integer> list;
     public static StringBuffer sb;
 
     public static void main(String[] args) throws IOException {
@@ -27,7 +26,6 @@ public class Main {
         }
 
         // 백트래킹
-        list = new ArrayList();
         sb = new StringBuffer();
         combination(0, M);
 
