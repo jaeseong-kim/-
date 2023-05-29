@@ -11,9 +11,11 @@ public class Main {
         StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < str.length(); i++) {
-            char c = str.charAt(i);
 
-            sb.append(c);
+            // 문자열 넣기
+            sb.append(str.charAt(i));
+
+            // 폭탄 문자열보다 길어지면 sb 검사
             if (sb.length() >= bomb.length()) {
                 boolean sameFlag = true;
                 for (int j = 0; j < bomb.length(); j++) {
@@ -26,17 +28,16 @@ public class Main {
                 }
 
                 if (sameFlag) {
-                    sb = sb.delete(sb.length() - bomb.length(), sb.length());
+                    sb.delete(sb.length() - bomb.length(), sb.length());
                 }
             }
         }
 
+        // 출력
         if (sb.length() == 0) {
             System.out.println("FRULA");
         } else {
             System.out.println(sb);
         }
-
-
     }
 }
