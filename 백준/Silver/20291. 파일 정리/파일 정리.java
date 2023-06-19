@@ -30,8 +30,11 @@ public class Main {
 
         Arrays.sort(arr);
 
+        StringBuffer sb = new StringBuffer();
         for (int j = 0; j < arr.length; j++) {
-            System.out.println(arr[j] + " " + map.get(arr[j]));
+            sb.append(arr[j]).append(" ").append(map.get(arr[j])).append("\n");
         }
+
+        System.out.println(sb);
     }
 }
