@@ -25,14 +25,12 @@ class Solution {
             
             String completeMan = completion[i];
             
-            if(map.containsKey(completeMan)){
-                
-                map.replace(completeMan,map.get(completeMan)-1);
-            
-                if(map.get(completeMan)==0){
-                    map.remove(completeMan,map.get(completeMan));
-                }
+            map.replace(completeMan,map.get(completeMan)-1);
+                        
+            if(map.get(completeMan)==0){
+                map.remove(completeMan,map.get(completeMan));
             }
+            
         }
         
         for(String unCompleteMan : map.keySet()){
