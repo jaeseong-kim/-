@@ -1,20 +1,14 @@
-import java.util.*;
+import java.util.Arrays;
 
 class Solution {
     public int[] solution(int[] array, int[][] commands) {
+        
         int[] answer = new int[commands.length];
         
         for(int i = 0; i < commands.length; i++){
             
-            // 초기화
-            int length = commands[i][1] - commands[i][0] + 1;
-            int[] subArr = new int[length];
-            int idx = 0;
-            
             // 복사
-            for(int j = commands[i][0] - 1; j < commands[i][1]; j++){
-                subArr[idx++] = array[j];
-            }
+            int[] subArr = Arrays.copyOfRange(array, commands[i][0] - 1, commands[i][1]);
             
             // 정렬
             Arrays.sort(subArr);
