@@ -29,13 +29,13 @@ public class Main{
         for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine());
             
-            int a = Integer.parseInt(st.nextToken());
-            int b = Integer.parseInt(st.nextToken());
+            int a = Integer.parseInt(st.nextToken()) - 1;
+            int b = Integer.parseInt(st.nextToken()) - 1;
 
-            if(a == 1){
-                bw.write(sum[b-1]+"\n");
+            if(a == 0){
+                bw.write(sum[b]+"\n");
             }else{
-                bw.write(sum[b-1] - sum[a - 2]+"\n");
+                bw.write(sum[b] - sum[a - 1]+"\n");
             }
 
         }
