@@ -17,11 +17,9 @@ fun main(){
         sum+=price*amount
     }
     
-    var answer = ""
-    if(X == sum){
-        answer = "Yes"
-    }else{
-        answer = "No"
+    val answer = when(X){
+        sum -> "Yes"
+        else -> "No"
     }
     print(answer)
 }
